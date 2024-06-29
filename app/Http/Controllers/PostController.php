@@ -33,7 +33,7 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'slug' => 'required|string',
+            'slug' => 'required|string|unique:posts',
             'image' => 'required|string',
             'content' => 'required|string'
         ]);
