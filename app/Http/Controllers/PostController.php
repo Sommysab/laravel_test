@@ -90,6 +90,7 @@ class PostController extends Controller
         $retrievedPost->slug = $request->slug;
         $retrievedPost->image = $request->image;
         $retrievedPost->content = $request->content;
+        $retrievedPost->published_at = now();
 
         $retrievedPost->save();
 
